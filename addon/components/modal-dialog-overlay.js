@@ -5,7 +5,7 @@ export default Ember.Component.extend({
   'data-ember-modal-dialog-overlay': true,
 
   // trigger only when clicking the overlay itself, not its children
-  click(event) {
+  mouseDown(event) {
     if (event.target === this.get('element')) {
       this.sendAction();
     }
